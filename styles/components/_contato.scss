@@ -1,0 +1,90 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+#contatos{
+  @include mixins.margem-central(80%);
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  padding: 4em 0;
+
+  .contatos-imgs{
+    max-width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.3em;
+    justify-content: space-around;
+
+    img{
+      width: 100%;
+
+      &:nth-child(n+2){
+        width: 48%;
+      }
+    }
+  }
+
+  .contatos-form{
+    max-width: 50%;
+    background: variaveis.$gradiente-primario;
+    border-radius: 48px;
+    padding: 2em 3em;
+
+    & .titulo{
+      @include mixins.fonte(variaveis.$fonte-titulos, 1.2em, variaveis.$roxo-vibrante);
+    }
+
+    & .infos{
+      @include mixins.fonte(variaveis.$fonte-textos, 1em, variaveis.$roxo-escuro);
+    }
+
+    .inputs{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5em;
+      align-self: stretch;
+
+      input{
+        @include mixins.fonte(variaveis.$fonte-textos, 1em, variaveis.$roxo-escuro);
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        padding: 1em;
+      }
+
+      .form-group{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+
+        label{
+          @extend .infos;
+          font-weight: bold;
+        }
+
+        textarea{
+          @extend input;
+          resize: none;
+          padding: 2em 1em;
+        }
+      }
+      
+      .btn{
+        background: variaveis.$roxo-calmante;
+        @extend input;
+        color: variaveis.$cor-branca;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 2em;
+        
+        &:hover{
+          background-color: variaveis.$roxo-vibrante;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}

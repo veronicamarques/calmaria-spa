@@ -1,0 +1,88 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+header{
+  background: variaveis.$gradiente-primario;
+  padding: 2em;
+
+  nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6em;
+
+    .linha{
+      border-top: 1px solid black;
+      width: 80%;
+    }
+
+    ul {
+      display: inline-flex;
+      gap: 2em;
+    
+      li{
+        list-style-type: none;
+
+        a{
+          text-decoration: none;
+          @include mixins.fonte(variaveis.$fonte-textos, 1em, variaveis.$roxo-escuro);
+          font-weight: 500;
+
+          &:hover{
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+  }
+
+  #home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1040px;
+    @include mixins.margem-central(80%);
+    padding: 3em 0;
+
+    .textos-home{
+      max-width: 464px;
+
+      h1{
+        line-height: 63px;
+        font-weight: 400;
+        @include mixins.fonte(variaveis.$fonte-textos, 42px, variaveis.$roxo-escuro);
+
+        span{
+          color: variaveis.$roxo-vibrante;
+        }
+        
+      }
+
+      .btn-main{
+        border-radius: 40px;
+        padding: 0.5em 2em;
+        font-size: 22px;
+        background-color: variaveis.$lilas;
+        color: variaveis.$cor-branca;
+        border: none;
+
+        &:hover{
+          background-color: variaveis.$roxo-vibrante;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+      }
+    }
+
+    .img-home{
+      max-width: 474px;
+
+      img{
+        width: 100%;
+      }
+
+    }
+  }
+}
