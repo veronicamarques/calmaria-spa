@@ -1,2 +1,2 @@
 # calmaria-spa
-Landing Pagr de um spa desenvolvido no curso de SASS da Alura.
+Landing Page de um spa desenvolvido no curso de SASS da Alura.
