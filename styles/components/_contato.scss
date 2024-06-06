@@ -73,16 +73,23 @@
       }
       
       .btn{
-        background: variaveis.$roxo-calmante;
+        background-color: variaveis.$roxo-vibrante;
         @extend input;
         color: variaveis.$cor-branca;
         cursor: pointer;
         width: 100%;
         margin-top: 2em;
+        border-radius: 40px;
+        box-shadow: none;
+        transform: translate(0, 0);
+        transition: all 0.4s ease-in-out;
         
         &:hover{
-          background-color: variaveis.$roxo-vibrante;
-          transition: 0.3s;
+          cursor: pointer;
+          background-color: black;
+          box-shadow: -1px 7px 5px #7a7a7c;
+          transform: translate(5px, -5px);
+          transition: all 0.4s ease-in-out;
         }
       }
     }

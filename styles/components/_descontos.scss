@@ -8,6 +8,10 @@
 
   .desconto-form{
     text-align: center;
+
+    #labelEmail{
+      text-indent: -9999px;
+    }
     
     h4{
       @include mixins.fonte(variaveis.$fonte-titulos, 1.4em, variaveis.$roxo-escuro);
@@ -21,10 +25,20 @@
       $largura-input: 790px;
       width: $largura-input;
       height: 65px;
-      border: 1px solid variaveis.$roxo-vibrante;
+      border: 1px solid variaveis.$azul;
       border-radius: 65px;
       margin: 0 auto;
       display: inline-flex;
+
+      &:hover{
+        border-color: black;
+        transition: all 0.4s ease-in-out;
+
+        button{
+          background-color: black;
+          transition: all 0.4s ease-in-out;
+        }
+      }
 
       input{
         @include mixins.fonte(variaveis.$fonte-textos, 1em, variaveis.$roxo-escuro);
@@ -41,8 +55,12 @@
         border: none;
         border-radius: 0 65px 65px 0;
         cursor: pointer;
-      }
 
+        &:hover{
+          background-color: black;
+          transition: all 0.4s ease-in-out;
+        }
+      }
     }
   }
 }
