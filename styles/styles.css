@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -239,7 +240,7 @@ header #home .img-home img {
 }
 #contatos .contatos-form {
   max-width: 50%;
-  background: linear-gradient(180deg, #E8F5C8 0%, #FFFFFF 96.87%);
+  background: #E8F5C8;
   border-radius: 48px;
   padding: 2em 3em;
 }
@@ -248,7 +249,7 @@ header #home .img-home img {
   font-size: 1.2em;
   color: #1840db;
 }
-#contatos .contatos-form .infos, #contatos .contatos-form .inputs .form-group label {
+#contatos .contatos-form .infos, #contatos .contatos-form .inputs fieldset .inputs__radio--opcoes, #contatos .contatos-form .inputs fieldset legend, #contatos .contatos-form .inputs .form-group label {
   font-family: "MontSerrat", sans-serif;
   font-size: 1em;
   color: #0C0421;
@@ -282,6 +283,24 @@ header #home .img-home img {
   resize: none;
   padding: 2em 1em;
 }
+#contatos .contatos-form .inputs fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+#contatos .contatos-form .inputs fieldset legend {
+  font-weight: bold;
+  padding: 1em 0;
+}
+#contatos .contatos-form .inputs fieldset .inputs__radio--opcoes {
+  display: flex;
+  gap: 2em;
+}
+@media screen and (min-width: 0) and (max-width: 1300px) {
+  #contatos .contatos-form .inputs fieldset .inputs__radio--opcoes {
+    display: block;
+  }
+}
 #contatos .contatos-form .inputs .btn {
   background-color: #1840db;
   color: #FFFFFF;
@@ -305,7 +324,29 @@ footer {
   font-family: "MontSerrat", sans-serif;
   font-size: 1em;
   color: #0C0421;
-  padding: 2em;
+  padding: 1em;
   background: #E8F5C8;
   text-align: center;
+}
+footer address p {
+  font-style: normal;
+}
+footer address ul {
+  display: flex;
+  list-style-type: none;
+  gap: 2em;
+  justify-content: center;
+  padding-left: 0;
+}
+footer address .imagens {
+  width: 2rem;
+}
+footer address .rodape__nav--lista--whatsapp {
+  content: url("../../assets/assets-figma/Desktop/Ícones/SVG/whatsapp.svg");
+}
+footer address .rodape__nav--lista--instagram {
+  content: url("../../assets/assets-figma/Desktop/Ícones/SVG/instagram.svg");
+}
+footer address .rodape__nav--lista--github {
+  content: url("../../assets/assets-figma/Desktop/Ícones/SVG/github.svg");
 }/*# sourceMappingURL=styles.css.map */

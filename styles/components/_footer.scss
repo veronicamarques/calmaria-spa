@@ -4,7 +4,37 @@
 
 footer{
   @include mixins.fonte(variaveis.$fonte-textos, 1em, variaveis.$roxo-escuro);
-  padding: 2em;
+  padding: 1em;
   background: variaveis.$verde-calmante;
-  text-align: center;
+  text-align: center;  
+
+  address{
+
+    p{
+      font-style: normal;
+    }
+
+    ul{
+      display: flex;
+      list-style-type: none;
+      gap: 2em;
+      justify-content: center;
+      padding-left: 0;
+    }
+
+    .imagens{
+      width: 2rem;
+    }
+
+    .rodape__nav--lista--whatsapp{
+      content: url('../../assets/assets-figma/Desktop/Ícones/SVG/whatsapp.svg');
+    }
+
+    .rodape__nav--lista--instagram{
+      content: url('../../assets/assets-figma/Desktop/Ícones/SVG/instagram.svg');
+    }
+    .rodape__nav--lista--github{
+      content: url('../../assets/assets-figma/Desktop/Ícones/SVG/github.svg');
+    }
+  } 
 }

@@ -27,7 +27,7 @@
 
   .contatos-form{
     max-width: 50%;
-    background: variaveis.$gradiente-primario;
+    background: variaveis.$verde-calmante;
     border-radius: 48px;
     padding: 2em 3em;
 
@@ -69,6 +69,30 @@
           @extend input;
           resize: none;
           padding: 2em 1em;
+        }
+      }
+
+      fieldset{
+        border: none;
+        margin: 0;
+        padding: 0;
+
+        legend{
+          @extend .infos;
+          font-weight: bold;
+          padding: 1em 0;
+        }
+
+        .inputs__radio--opcoes{
+          display: flex;
+          gap: 2em;
+          @extend .infos;
+        }
+
+        @media screen and (min-width: 0) and (max-width: 1300px) {
+          .inputs__radio--opcoes{
+            display: block;
+          }
         }
       }
       
